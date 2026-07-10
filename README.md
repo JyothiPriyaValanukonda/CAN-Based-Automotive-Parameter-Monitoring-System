@@ -1,20 +1,34 @@
-# 🚗 CAN-Based Automotive Parameter Monitoring System
+## 🚗 CAN-Based Automotive Parameter Monitoring System
+
+A real-time automotive monitoring system that simulates communication between multiple Electronic Control Units (ECUs) using the Controller Area Network (CAN) protocol. The project demonstrates how vehicle parameters such as fuel level, engine temperature, and indicator status are exchanged over a CAN bus and displayed on a central monitoring ECU.
 
 ---
 
-## 📖 Overview
+## Overview
 
-This project implements a **real-time automotive parameter monitoring system** using the **CAN (Controller Area Network) protocol**.
+Modern automobiles contain dozens of ECUs that continuously exchange information using the Controller Area Network (CAN). Instead of directly wiring every sensor to a single controller, CAN enables distributed communication between ECUs with high reliability, fault tolerance, and reduced wiring complexity. CAN has become the standard in automotive electronics because it supports deterministic, real-time communication while minimizing wiring, improving scalability, and providing built-in error detection.
 
-It simulates communication between multiple Electronic Control Units (ECUs) to monitor key vehicle parameters such as:
+This project implements a simplified CAN-based automotive network consisting of three ECUs:
 
-* Engine temperature
-* Fuel level
-* Indicator status
+Engine Temperature ECU
+Fuel Monitoring ECU
+Indicator ECU
 
-The system is divided into multiple nodes, each responsible for specific functionality, and all nodes communicate over a **CAN bus** for reliable and efficient data exchange.
+Each ECU independently collects sensor data or switch inputs and transmits them over the CAN bus to a Main ECU, which displays the received information on an LCD.
 
 ---
+
+## Features
+
+Real-time CAN communication
+Distributed ECU architecture
+Fuel level monitoring
+Engine temperature monitoring
+Left & Right indicator monitoring
+LCD-based central dashboard
+CAN message filtering using Message IDs
+Fault-tolerant communication architecture
+Modular firmware design
 
 ##  Block Diagram
 
@@ -34,6 +48,17 @@ The system is divided into multiple nodes, each responsible for specific functio
 | LEDs                            | 8        | Represent vehicle indicators                  |
 | Switches                        | 2        | Trigger interrupts for indicator control      |
 | USB to UART Converter           | 1        | Used for programming/debugging                |
+
+---
+
+## Software Used
+
+Embedded C
+Keil µVision
+Flash Magic
+Proteus (Simulation)
+CAN Protocol
+ARM7 LPC2129
 
 ---
 
@@ -60,4 +85,5 @@ Interrupts are used for fast response in indicator control.
 
 ## 📟 LCD Display
 
-<img width="889" height="1600" alt="WhatsApp Image 2026-07-10 at 1 52 08 PM" src="https://github.com/user-attachments/assets/b6f195de-d2b2-486b-bff0-38ed5bbdc628" />
+<img width="492" height="537" alt="image" src="https://github.com/user-attachments/assets/bb191b88-6c79-49b1-8eb9-ab2894c1fe75" />
+
