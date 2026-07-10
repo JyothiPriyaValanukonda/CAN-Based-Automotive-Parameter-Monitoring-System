@@ -58,14 +58,6 @@ Interrupts are used for fast response in indicator control.
 
 ---
 
-## 📟 LCD Display (Formatted Output)
+## 📟 LCD Display
 
-```
------- Project Menu ------
-
-Engine Temp : 32.0 °C
-Fuel        : ████▄ (95%)
-Indicator   : < >
-```
-
----
+<img width="889" height="1600" alt="WhatsApp Image 2026-07-10 at 1 52 08 PM" src="https://github.com/user-attachments/assets/b6f195de-d2b2-486b-bff0-38ed5bbdc628" />
